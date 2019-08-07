@@ -1,3 +1,3 @@
 # TAQA
 CI sponsor correspondence
-This is a line from RStudio
+This script will analyze online sponsor correspondence and flag prohibited content
