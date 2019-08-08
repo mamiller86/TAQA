@@ -183,3 +183,4 @@ sponsorLetters <- function(FILEPATH, SEARCHLIST){
   report = report %>% select(c(DigitalAssetID, Flags))
   return(report)
 }
+
