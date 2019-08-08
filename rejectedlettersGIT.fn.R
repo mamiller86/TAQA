@@ -173,8 +173,6 @@ sponsorLetters <- function(FILEPATH, SEARCHLIST){
   inds = which(names(text) %in% c("name_mismatch", "sp_needs_translate", "gift", "contact", "religion_India", "visit", 
                                   "education", "badword"))
   text$anyFlag = apply(text[,inds], 1, function(x) ifelse(sum(x=="Y", na.rm=T)>=1, "Y", ""))
-  # which(text$anyflag=="Y")
-  # report = text[text$anyFlag =="Y",]
   report=text
   report = dplyr::select(report, c(DigitalAssetID, language, sp_needs_translate:name_mismatch))
   names(report) = c("DigitalAssetID","Language", "Sp Needs Translated", "Gift", "Contact", "Religion (India)", "Visit", "Education", "Bad Word",
